@@ -22,6 +22,12 @@ var Shooter = function () {
 
 			d3.select('.game-over').remove();
 
+			d3.select('.toolbar')
+				.transition()
+				.duration(600)
+					.style('height', '100px')
+					.style('opacity', 1);
+
 			d3.select('.modal')
 				.transition()
 				.duration(600)
@@ -126,6 +132,11 @@ var Shooter = function () {
 			.duration(600)
 				.style('height', '320px')
 				.style('opacity', 1);
+		d3.select('.toolbar')
+			.transition()
+			.duration(600)
+				.style('height', '0px')
+				.style('opacity', 0.1);
 	};
 
 	scope.initCanvas = function () {

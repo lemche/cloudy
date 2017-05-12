@@ -30,8 +30,8 @@ html,body{height:100%;padding:0;margin:0}
 .container .main .sm{fill:rgba(0,0,0,0.1)}
 .container.dark .element text{fill:yellow}
 .container.dark .color-theme{background:white}
-.container.dark .modal{color:whitesmoke}
-.container.dark .modal .hotkey{color:whitesmoke}
+.container.dark .modal{color:black}
+.container.dark .modal .hotkey{color:black}
 .container.dark .main{background: #abd0d6 }
 .container.dark .main .bg-circle{fill:whitesmoke}
 .container.dark text{fill:yellow}
