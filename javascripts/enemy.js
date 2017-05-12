@@ -32,14 +32,17 @@ var Enemy = function (params) {
 		if (Math.random()*10 > 5) {
 			scope.enemy.append('svg:image')
 			.attr('xlink:href', 'images/enemy.svg')
-                //.attr('x',10)
-                //.attr('y', 10)
+                .attr('x',10)
+                .attr('y', 10)
                 .attr('width', 140)
                 .attr('height', 100);
             } else {
             	scope.enemy.append('svg:image')
-				.attr('xlink:href', 'images/enemym.svg');
-
+				.attr('xlink:href', 'images/enemym.svg')
+				.attr('x',10)
+                .attr('y', 10)
+                .attr('width', 140)
+                .attr('height', 100);
             }
 
 

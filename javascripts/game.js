@@ -67,9 +67,9 @@ var Shooter = function () {
 				.append('rect')
 				.classed('bar-health', true)
 				.attr('y', 10)
-				.attr('rx', 2)
-				.attr('ry', 2)
-				.attr('height', 20);
+				.attr('rx', 1)
+				.attr('ry', 1)
+				.attr('height', 15);
 		}
 
 		healthBar
@@ -77,7 +77,7 @@ var Shooter = function () {
 			.transition()
 			.duration(600)
 				.attr('width', 240)
-				.style('fill', '#1ECD97');
+				.style('fill', '#7C377D');
 
 		healthLabel = scope.healthContaner.select('.label');
 
@@ -85,7 +85,7 @@ var Shooter = function () {
 			healthLabel = scope.healthContaner.append('text')
 				.classed('label', true)
 				.attr('x', 125)
-				.attr('y', 25);
+				.attr('y', 21);
 		}
 
 		healthLabel.text('100%');
@@ -265,7 +265,7 @@ var Shooter = function () {
 			.attr('rx', 2)
 			.attr('ry', 2)
 			.attr('width', 240)
-			.attr('height', 20);
+			.attr('height', 15);
 	};
 
 	scope.updateHealth = function (damage) {
@@ -292,7 +292,7 @@ var Shooter = function () {
 				.style('fill', function () {
 					var red = '#d9534f',
 						orange = '#f0ad4e',
-						green = '#1ECD97';
+						green = '#A349A4';
 
 					if (percentage > 60) {
 						return green;
