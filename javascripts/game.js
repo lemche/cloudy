@@ -99,6 +99,12 @@ var Shooter = function () {
 
 		scope.addEnemy();
 		scope.scheduleNewEnemy();
+		
+		d3.select('.toolbar')
+			.transition()
+			.duration(600)
+				.style('height', '0px')
+				.style('opacity', 0.1);
 	};
 
 	scope.gameover = function () {
@@ -132,11 +138,6 @@ var Shooter = function () {
 			.duration(600)
 				.style('height', '320px')
 				.style('opacity', 1);
-		d3.select('.toolbar')
-			.transition()
-			.duration(600)
-				.style('height', '0px')
-				.style('opacity', 0.1);
 	};
 
 	scope.initCanvas = function () {
