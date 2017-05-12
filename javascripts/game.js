@@ -1,6 +1,7 @@
 var Shooter = function () {
 	var scope = this;
 	
+
 	d3.xml('images/explosion.svg', function (xml) {
 		
 		scope.explosion = xml.documentElement;
@@ -16,7 +17,10 @@ var Shooter = function () {
 		scope.initDestroyedCounter();
 		scope.initHealthbar();
 		
-		d3.select('button').on('click', function () {
+
+		namePlayer = d3.select('namePl').value;
+
+         d3.select('button').on('click', function () {
 			scope.start();
 
 			d3.select('.game-over').remove();
@@ -27,6 +31,9 @@ var Shooter = function () {
 					.style('height', '0px')
 					.style('opacity', 0.1);
 		});
+
+ 
+		
 	});
 
 	scope.start = function () {
@@ -108,7 +115,16 @@ var Shooter = function () {
 			.duration(3000)
 				.style('opacity', 1)
 				.style('font-size', 45);
+
+
+		/*d3.select('.modal2')
+			.transition()
+			.duration(600)
+				.style('display', 'block')
+				.style('z-index', 10);*/
+
 		
+
 		scope.game.selectAll('g')
 			.transition()
 			.duration(2000)
@@ -126,6 +142,18 @@ var Shooter = function () {
 			.duration(600)
 				.style('height', '320px')
 				.style('opacity', 1);
+
+
+	    d3.canvas.append('text')
+	    	.text('Enter your name here')
+	    	.classed('game-over',true)
+	    	.attr('x', scope.width/2)
+	    	.attr('y', scope.height/3)
+	    	.transition()
+			.duration(3000)
+				.style('opacity', 1)
+				.style('font-size', 45);
+
 	};
 
 	scope.initCanvas = function () {

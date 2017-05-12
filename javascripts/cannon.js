@@ -79,6 +79,7 @@ var Cannon = function (params) {
 
 	/* Hotkeys */
 	scope.initHotkeys = function () {
+
 		d3.select("body")
 			.on("keydown", scope.keyup);
 
@@ -405,6 +406,8 @@ var Cannon = function (params) {
 	};
 
 	scope.initCannon();
-	scope.initMouse();	
+	scope.initMouse();
 	scope.initHotkeys();
+
+	
 };

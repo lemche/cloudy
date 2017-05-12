@@ -42,3 +42,10 @@ html,body{height:100%;padding:0;margin:0; width: 100%;-webkit-user-select: none;
 .cannon line{opacity:0;stroke:#1ECD97;stroke-width:8}
 .rocket #exhaust{opacity:0}
 .footer{padding:10px;font-size:12px}
+
+.container .modal2{transition:color .6s ease-in-out;position:fixed; display: none; top:35%; right: 42%;color:#333;width:240px;height:320px;overflow:hidden}
+.container .modal2 a{text-decoration:none;color:dodgerblue}
+.container .modal2 a:hover{text-decoration:underline}
+.container .modal2 table{transition:color .6s ease-in-out; background: rgba(97,97,97,0.1);border:1px dashed #gray; border-radius: 2px;margin-top:10px; padding:5px;}
+.container .modal2 table td{padding:5px;}
+.container .modal2 table tr>td:first-child{}
