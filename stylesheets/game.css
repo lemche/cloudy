@@ -8,7 +8,7 @@ html,body{height:100%;padding:0;margin:0; width: 100%;-webkit-user-select: none;
 .container .toolbar .element text{transition:fill .6s ease-in-out;font-family:"Tahoma" monospace;fill:#7C5A97;font-size:20px}
 .container .toolbar .healthbar .bar-background{fill: #7C377D}
 .container .toolbar .healthbar .bar-health{fill:#A349A4}
-.container .toolbar .healthbar .label{text-anchor:middle;fill:white;font-size:12px;font-family: Arial;font-weight: bold}
+.container .toolbar .healthbar .label{text-anchor:middle;fill:white;font-size:11px;font-family: Arial;font-weight: bold}
 .container .modal{transition:color .6s ease-in-out;position:fixed;top:100px;right:5%;color:#333;width:240px;height:320px;overflow:hidden}
 .container .modal button{transition:all .1s ease-in-out;cursor:pointer;display:block;width:100%;padding:10px;border:none;color:#fff;background-color:#A349A4;border-radius:4px;font-size:20px}
 .container .modal button:active,.container .modal button:focus{outline:none}
