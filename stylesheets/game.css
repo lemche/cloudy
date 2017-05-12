@@ -23,7 +23,7 @@ html,body{height:100%;padding:0;margin:0; width: 100%;-webkit-user-select: none;
 .container .main{transition:background .6s ease-in-out}
 .container .main .bg-circle{transition:fill .6s ease-in-out;fill:#999;stroke:none}
 .container .main text{font-family:"Arial" monospace;stroke:none;fill:#E74C3C}
-.container .main .game-over{text-anchor:middle;font-size:30px;fill:#999;opacity:0.1}
+.container .main .game-over{text-anchor:middle;font-size:30px;fill:#000;opacity:0.1}
 .container .main .blue .lg{fill:cornflowerblue}
 .container .main .purple .lg{fill:mediumslateblue}
 .container .main .marine .lg{fill:mediumaquamarine}
