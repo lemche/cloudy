@@ -13,7 +13,7 @@ var Enemy = function (params) {
 		var cxStart = scope.randomY(),
 			cxEnd = scope.randomY(),
 			data = scope.randomData(),
-			t = scope.randomTime(),
+			t = scope.randomTime()/2,
 			bigR = data.scale * 15,
 			smallR = data.scale * 5;		
 

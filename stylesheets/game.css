@@ -3,7 +3,7 @@ html,body{height:100%;padding:0;margin:0; width: 100%;-webkit-user-select: none;
     -ms-user-select: none;}
 .container{overflow:hidden;border-radius:2px}
 .container .toolbar{position:fixed;top:20px;right:5%;}
-.container .toolbar .element{float:right}
+.container .toolbar .element{float:left;}
 .container .toolbar .element .caption{transition:color .6s ease-in-out;margin-top:-20px;color:#383838;font-size:11px;font-weight:200;text-transform:lowercase}
 .container .toolbar .element text{transition:fill .6s ease-in-out;font-family:"Tahoma" monospace;fill:#7C5A97;font-size:20px}
 .container .toolbar .healthbar .bar-background{fill: #7C377D}
@@ -16,10 +16,10 @@ html,body{height:100%;padding:0;margin:0; width: 100%;-webkit-user-select: none;
 .container .modal button:active{box-shadow:inset 1px 2px 1px rgba(0,0,0,0.1)}
 .container .modal a{text-decoration:none;color:dodgerblue}
 .container .modal a:hover{text-decoration:underline}
-.container .modal table{border:none}
-.container .modal table td{padding:5px}
-.container .modal table tr>td:first-child{text-align:right}
-.container .modal .hotkey{transition:color .6s ease-in-out;background:rgba(0,0,0,0.1);border-radius:2px;border:1px solid rgba(0,0,0,0.2);padding:2px 5px;font-family: Arial;font-size:12px}
+.container .modal table{transition:color .6s ease-in-out; background: rgba(97,97,97,0.1);border:1px dashed #gray; border-radius: 2px;margin-top:10px; padding:5px;}
+.container .modal table td{padding:5px;}
+.container .modal table tr>td:first-child{}
+.container .modal .hotkey{transition:color .6s ease-in-out; background: rgba(124,55,126,0.3);border-radius:2px;border:1px solid gray;padding:4px 5px;font-family: Arial;font-size:12px}
 .container .main{transition:background .6s ease-in-out}
 .container .main .bg-circle{transition:fill .6s ease-in-out;fill:#999;stroke:none}
 .container .main text{font-family:"Arial" monospace;stroke:none;fill:#E74C3C}
