@@ -1,6 +1,7 @@
 var Enemy = function (params) {
 	var scope = this;
 
+
 	scope.shooter = params.shooter;
 	scope.canvas = scope.shooter.canvas;
 	scope.game = scope.shooter.game;
@@ -25,26 +26,23 @@ var Enemy = function (params) {
 			.transition()
 			.duration(t)
 				.ease('linear')
-				.attr('transform', 'translate(' + [-bigR, cxEnd] + ')')
+				.attr('transform', 'translate(' + [0, cxEnd] + ')')
 				.remove();
 
 		if (Math.random()*10 > 5) {
 			scope.enemy.append('svg:image')
 			.attr('xlink:href', 'images/enemy.svg')
-                .attr('x', 60)
-                .attr('y', 60)
+                //.attr('x',10)
+                //.attr('y', 10)
                 .attr('width', 140)
                 .attr('height', 100);
             } else {
             	scope.enemy.append('svg:image')
-			.attr('xlink:href', 'images/enemym.svg')
-                .attr('x', 60)
-                .attr('y', 60)
-                .attr('width', 140)
-                .attr('height', 100);
+				.attr('xlink:href', 'images/enemym.svg');
+
             }
 
-        
+
 		/*scope.enemy.append('circle')
 			.classed('lg', true)
 			.attr('r', bigR);
@@ -106,7 +104,7 @@ var Enemy = function (params) {
 								.style('opacity', 0)
 								.remove();
 
-						damage = Math.round(Math.random() * 12 + 25);
+						damage = Math.round(Math.random() * 12 + 35);
 
 						scope.canvas.append('text')
 							.text(damage)

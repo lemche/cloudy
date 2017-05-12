@@ -1,14 +1,15 @@
-html,body{height:100%;padding:0;margin:0}
+html,body{height:100%;padding:0;margin:0; width: 100%;-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;}
 .container{overflow:hidden;border-radius:2px}
-.container .toolbar{position:fixed;top:20px;left:80%}
-.container .toolbar .color-theme{transition:background .6s ease-in-out;cursor:pointer;float:left;margin-right:15px;margin-top:10px;width:35px;height:35px;border-radius:2px;background:#666}
-.container .toolbar .element{float:left;margin-right:5px}
-.container .toolbar .element .caption{transition:color .6s ease-in-out;margin-top:-20px;color:#999;font-size:12px;font-weight:200;text-transform:uppercase}
-.container .toolbar .element text{transition:fill .6s ease-in-out;font-family:"Monaco" monospace;fill:#1ECD97;font-size:20px}
-.container .toolbar .healthbar .bar-background{fill: #ff0000}
+.container .toolbar{position:fixed;top:20px;right:5%;}
+.container .toolbar .element{float:right}
+.container .toolbar .element .caption{transition:color .6s ease-in-out;margin-top:-20px;color:#383838;font-size:11px;font-weight:200;text-transform:lowercase}
+.container .toolbar .element text{transition:fill .6s ease-in-out;font-family:"Tahoma" monospace;fill:#7C5A97;font-size:20px}
+.container .toolbar .healthbar .bar-background{fill: #820046}
 .container .toolbar .healthbar .bar-health{fill:#1ECD97}
 .container .toolbar .healthbar .label{text-anchor:middle;fill:white;font-size:12px;font-family:'monaco' monospace}
-.container .modal{transition:color .6s ease-in-out;position:fixed;top:110px;left:80%;color:#333;font-weight:200;width:240px;height:320px;overflow:hidden}
+.container .modal{transition:color .6s ease-in-out;position:fixed;top:110px;right:5%;color:#333;width:240px;height:320px;overflow:hidden}
 .container .modal button{transition:all .1s ease-in-out;cursor:pointer;display:block;width:100%;padding:10px;border:none;color:#fff;background-color:rgba(30,205,151,0.8);border-radius:4px;font-size:20px}
 .container .modal button:active,.container .modal button:focus{outline:none}
 .container .modal button:hover{background-color:#1ecd97}
@@ -42,4 +43,3 @@ html,body{height:100%;padding:0;margin:0}
 .cannon line{opacity:0;stroke:#1ECD97;stroke-width:8}
 .rocket #exhaust{opacity:0}
 .footer{padding:10px;font-size:12px}
-

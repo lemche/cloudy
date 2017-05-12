@@ -1,5 +1,5 @@
 html,body,.container{width:100%;height:100%}
-body{background:#fafafa;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#333;min-height:600px;min-width:700px}
-svg .rocket #exhaust{opacity:0}
+body{background:#fafafa;font-family:Arial,sans-serif;color:#7F7F7F;min-height:600px;min-width:700px}
+svg .rocket #exhaust{opacity:1}
 svg .rocket #exhaust .smoke{fill:none;stroke:none}
 svg .rect,svg .smoke{fill:none;stroke:none}

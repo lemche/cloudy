@@ -14,19 +14,12 @@ var Shooter = function () {
 		scope.initScore();
 		scope.initTimer();
 		scope.initDestroyedCounter();
-		scope.initAccuracy();
 		scope.initHealthbar();
 		
 		d3.select('button').on('click', function () {
 			scope.start();
 
 			d3.select('.game-over').remove();
-
-			d3.select('.toolbar')
-				.transition()
-				.duration(600)
-					.style('height', '100px')
-					.style('opacity', 1);
 
 			d3.select('.modal')
 				.transition()
@@ -60,13 +53,13 @@ var Shooter = function () {
 			}
 
 			value = parseInt(scope.healthContaner.attr('health'), 10);
-			if (value + 1 < 370) {
+			if (value + 1 < 240) {
 				scope.updateHealth(-1);
 			}
 
 		}, 1000);
 
-		scope.healthContaner.attr('health', 370)
+		scope.healthContaner.attr('health', 240)
 		healthBar = scope.healthContaner.select('.bar-health');
 
 		if (!healthBar.node()) {
@@ -83,7 +76,7 @@ var Shooter = function () {
 			.attr('width', 0)
 			.transition()
 			.duration(600)
-				.attr('width', 370)
+				.attr('width', 240)
 				.style('fill', '#1ECD97');
 
 		healthLabel = scope.healthContaner.select('.label');
@@ -91,7 +84,7 @@ var Shooter = function () {
 		if (!healthLabel.node()) {
 			healthLabel = scope.healthContaner.append('text')
 				.classed('label', true)
-				.attr('x', 185)
+				.attr('x', 125)
 				.attr('y', 25);
 		}
 
@@ -99,12 +92,7 @@ var Shooter = function () {
 
 		scope.addEnemy();
 		scope.scheduleNewEnemy();
-		
-		d3.select('.toolbar')
-			.transition()
-			.duration(600)
-				.style('height', '0px')
-				.style('opacity', 0.1);
+
 	};
 
 	scope.gameover = function () {
@@ -269,14 +257,14 @@ var Shooter = function () {
 
 	scope.initHealthbar = function () {
 		scope.healthContaner = d3.select('.healthbar svg')
-			.attr('health', 370);
+			.attr('health', 240);
 
 		scope.healthContaner.append('rect')
 			.classed('bar-background', true)
 			.attr('y', 10)
 			.attr('rx', 2)
 			.attr('ry', 2)
-			.attr('width', 370)
+			.attr('width', 240)
 			.attr('height', 20);
 	};
 
@@ -292,7 +280,7 @@ var Shooter = function () {
 			scope.gameover();
 		}
 
-		percentage = d3.round(health / 370 * 100);
+		percentage = d3.round(health / 240 * 100);
 
 		this.healthContaner.attr('health', health);
 
