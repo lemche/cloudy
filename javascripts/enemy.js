@@ -15,7 +15,7 @@ var Enemy = function (params) {
 			data = scope.randomData(),
 			t = scope.randomTime(),
 			bigR = data.scale * 15,
-			smallR = data.scale * 5;
+			smallR = data.scale * 5;		
 
 		scope.enemy = scope.game.append('g')
 			.classed('enemy ' + data.className, true)
@@ -29,6 +29,7 @@ var Enemy = function (params) {
 				.attr('transform', 'translate(' + [0, cxEnd] + ')')
 				.remove();
 
+
 		if (Math.random()*10 > 5) {
 			scope.enemy.append('svg:image')
 			.attr('xlink:href', 'images/enemy.svg')
@@ -36,6 +37,14 @@ var Enemy = function (params) {
                 .attr('y', 10)
                 .attr('width', 140)
                 .attr('height', 100);
+
+             scope.enemy.append('rect')
+                .attr('x',10)
+                .attr('y', 10)
+                .attr('width', 140)
+                .attr('height', 100)
+                .attr('fill','black')
+                .attr('opacity','0.0');
             } else {
             	scope.enemy.append('svg:image')
 				.attr('xlink:href', 'images/enemym.svg')
@@ -43,7 +52,25 @@ var Enemy = function (params) {
                 .attr('y', 10)
                 .attr('width', 140)
                 .attr('height', 100);
+
+                scope.enemy.append('rect')
+                .attr('x',10)
+                .attr('y', 10)
+                .attr('width', 140)
+                .attr('height', 100)
+                .attr('fill','black')
+                .attr('opacity','0.0');
             }
+
+/*d3.xml("images/enemy.svg", function(xml) {
+  scope.enemy.appendChild(xml.documentElement);
+
+  var circle = d3.select("svg").append("circle")
+            .attr("cx", 100)
+            .attr("cy", 100)
+            .attr("r", 20)
+            .style("fill", "red");
+});*/
 
 
 		/*scope.enemy.append('circle')
@@ -156,6 +183,9 @@ var Enemy = function (params) {
 		scope.enemy
 			.attr('intervalId', scope.enemy.intervalId)
 			.attr('killSwitchId', scope.enemy.killSwitchId);
+
+
+			//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
 	};
 
 	/* Helpers */
